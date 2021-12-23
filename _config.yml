@@ -37,7 +37,12 @@ plugins:
 # jekyll-asciidoc
 # https://github.com/asciidoctor/jekyll-asciidoc#configuration
 asciidoc: {}
-asciidoctor: {}
+asciidoctor:
+  attributes:
+    # Code highlighting
+    # https://github.com/asciidoctor/jekyll-asciidoc#stylesheet-for-code-highlighting
+    source-highlighter: pygments
+    pygments-css: class
 
 # Exclude from processing.
 # The following items will not be processed, by default.
