@@ -43,6 +43,9 @@ asciidoctor:
     # https://github.com/asciidoctor/jekyll-asciidoc#stylesheet-for-code-highlighting
     source-highlighter: pygments
     pygments-css: class
+    # Icons and Admonitions
+    # https://github.com/asciidoctor/jekyll-asciidoc#font-based-admonition-and-inline-icons
+    icons: font
 
 # Exclude from processing.
 # The following items will not be processed, by default.
