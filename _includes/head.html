@@ -1,6 +1,8 @@
 {% comment %}
 This file is copied from the minima gem. For info on how to update it,
 see https://jekyllrb.com/docs/themes/#overriding-theme-defaults.
+
+TODO: Only include icons, MathJax if they're used in the page.
 {% endcomment %}
 <head>
   <meta charset="utf-8">
@@ -15,4 +17,24 @@ see https://jekyllrb.com/docs/themes/#overriding-theme-defaults.
   {% endcomment %}
   <link rel="stylesheet" href="{{ '/css/asciidoc.css' | relative_url }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  {% comment %}
+  STEM Support
+  https://github.com/asciidoctor/jekyll-asciidoc#enabling-stem-support
+  {% endcomment %}
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      messageStyle: "none",
+      tex2jax: {
+        inlineMath: [["\\(", "\\)"]],
+        displayMath: [["\\[", "\\]"]],
+        ignoreClass: "nostem|nolatexmath"
+      },
+      asciimath2jax: {
+        delimiters: [["\\$", "\\$"]],
+        ignoreClass: "nostem|noasciimath"
+      },
+      TeX: { equationNumbers: { autoNumber: "none" } }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>  
 </head>
